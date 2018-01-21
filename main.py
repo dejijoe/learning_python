@@ -38,6 +38,9 @@ rates = [
 print('Welcome to our meetup python application')
 print('We only currently support Naira(Nigerian currency)')
 currency_or_country = input('Please a country or currency: ')
+amount = input('please enter amount:')
+
+
 
 result = None
 kind = None
@@ -58,5 +61,6 @@ for record in rates:
 
 if result:
     print("The rate for {} which is a {} is {}".format(currency_or_country, kind, result))
+    print("The equivalent amount is {}".format(int(amount) * result))
 else:
     print('Sorry! we could not find your country/currency ')
